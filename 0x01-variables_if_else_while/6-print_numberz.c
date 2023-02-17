@@ -2,16 +2,16 @@
 #include <stdlib.h>
 
 /**
- * main - putchar single digits of base ten
+ * main - print single digits using putchar
  * Return: 0
  */
 
 int main(void)
 {
-	int dig;
+	int ch;
 
-	for (dig = 0; dig < 10; dig++)
-		putchar(dig%10);
+	for (ch = 0; ch < 10; ch++)
+		putchar('0' + ch);
 
 	putchar('\n');
 
