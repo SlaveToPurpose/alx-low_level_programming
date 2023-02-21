@@ -1,6 +1,7 @@
 #include "main.h"
 
 /**
+ * @c: char variable
  * _isalpha - checks if char is an alphabet
  * Return: 1 if alphabetci char 0 otherwise
  */

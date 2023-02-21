@@ -2,6 +2,7 @@
 
 /**
  * _islower - determine if lowercase char
+ * @c: char
  * Return: 1 if c is lowercase otherwise 0
  */
 
