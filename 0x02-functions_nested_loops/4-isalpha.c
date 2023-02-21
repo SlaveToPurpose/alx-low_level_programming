@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * @c: char variable
  * _isalpha - checks if char is an alphabet
+ * @c: char
  * Return: 1 if alphabetci char 0 otherwise
  */
 
