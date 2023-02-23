@@ -1,4 +1,4 @@
-## README file for 0x02-functions nested loops
+# README file for 0x02-functions nested loops
 
 # Task 0
 
