@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
  * print_to_98 - print digits from n to 98
@@ -12,8 +11,11 @@ void print_to_98(int n)
 
 	for (g = n; g <= 97; g++)
 	{
-		printf("%d, ",g);
+		_putchar(g + '0');
+		_putchar(',');
+		_putchar(' ');
 	}
-	printf("98");
-	printf("\n");
+	_putchar('9');
+	_putchar('8');
+	_putchar('\n');
 }
