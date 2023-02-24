@@ -3,9 +3,10 @@
 
 /**
  * fizz_buzz - print fizz(*3) print buzz(*5) print fizzbuzz(*15)
+ * Return: 0
  */
 
-void fizz_buzz(void)
+int fizz_buzz(void)
 {
 	int k;
 
@@ -31,5 +32,6 @@ void fizz_buzz(void)
 		if (k > 0 && k < 100)
 			printf(" ");
 	}
-		printf("\n");
+	printf("\n");
+	return (0);
 }
