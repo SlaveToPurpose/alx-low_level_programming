@@ -1,12 +1,12 @@
 #include <stdio.h>
-#include "main.h"
+#include <stdlib.h>
 
 /**
- * fizz_buzz - print fizz(*3) print buzz(*5) print fizzbuzz(*15)
+ * main - print fizz(*3) print buzz(*5) print fizzbuzz(*15)
  * Return: 0
  */
 
-int fizz_buzz(void)
+int main(void)
 {
 	int k;
 
