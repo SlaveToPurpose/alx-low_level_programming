@@ -18,10 +18,11 @@ char *_strcpy(char *dest, char *src)
 		g = src[a];
 		dest[a] = g;
 	}
-	if (a > 0)
+	if (a >= 0)
 	{
 		dest[a + 1] = '\0';
 	}
+
 
 	return (dest);
 }
