@@ -21,6 +21,7 @@ void puts_half(char *str)
 		{
 			g = str[j];
 			_putchar(g);
+		}
 	}
 	else
 	{
