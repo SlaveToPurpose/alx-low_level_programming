@@ -20,11 +20,7 @@ char *_strcpy(char *dest, char *src)
 	}
 	if (a > 0)
 	{
-		dest[a +1] = '\0';
-	}
-	else
-	{
-		dest[0] = '\0';
+		dest[a + 1] = '\0';
 	}
 
 	return (dest);
