@@ -6,7 +6,7 @@
  * Return: string with uppercase letters
  */
 
-char* string_toupper(char *paramString)
+char *string_toupper(char *paramString)
 {
 	int g;
 	char l;
