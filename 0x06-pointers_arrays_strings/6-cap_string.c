@@ -18,12 +18,7 @@ char *cap_string(char *strToCap)
 	{}
 
 	if (g == 0)
-	{
-		if (strToCap[g] < 123 && strToCap[g] > 96)
-			return (strToCap - 32);
-		else
-			return (strToCap);
-	}
+		return (strToCap);
 
 	/* loop through string to test for word seperators */
 	for (a = 1; a < g; a++)
