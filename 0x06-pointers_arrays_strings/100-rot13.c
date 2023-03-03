@@ -11,30 +11,23 @@ char *rot13(char *paramStr)
 {
 	int g;
 	int m;
-	int s;
-	char temp;
 
-	/* find length of input */
-	for (s = 0; paramStr[s] != '\0'; s++)
-	{}
+	char alphaB[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-	/* loop through string to encrypt */
-	for (m = 0; m < s; m++)
+	char encrypT[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	for (g = 0; paramStr[g] != '\0'; g++)
 	{
-		g = paramStr[m];
-		g += 13;
-
-		if (g > 90)
+		for (m = 0; m < 52; m++)
 		{
-			g = g + 64 - 90;
-			temp = g;
-			paramStr[m] = temp;
-		}
-		else
-		{
-			temp = g;
-			paramStr[m] = temp;
+			if (paramStr[g] == alphaB[m])
+			{
+				paramStr[g] = encrypT[m];
+				break;
+			}
 		}
 	}
+
+
 	return (paramStr);
 }
