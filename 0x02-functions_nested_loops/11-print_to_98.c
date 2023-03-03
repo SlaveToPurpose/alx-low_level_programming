@@ -18,12 +18,12 @@ void print_to_98(int n)
 		}
 		printf("%d\n", 98);
 	}
-	else if (n > 98)
+	else if (n >= 98)
 	{
-		for (g = 98; g < n; g++)
+		for (g = n; g > 98; g--)
 		{
 			printf("%d, ", g);
 		}
-		printf("%d\n", n);
+		printf("%d\n", 98);
 	}
 }
