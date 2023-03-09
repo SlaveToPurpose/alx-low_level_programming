@@ -26,14 +26,11 @@ int _strlen_recursion(char *s)
 
 int isPalindromE(char *s, int leftIndx, int rightIndx)
 {
-	if (s == 00)
+	if (*(s + leftIndx) != *(s + rightIndx - 1))
 		return (0);
 	else if (leftIndx >= rightIndx)
 		return (1);
-	else if (s[leftIndx] == s[rightIndx])
-		return (isPalindromE(s, leftIndx + 1, rightIndx - 1));
-	else
-		return (0);
+	return (isPalindromE(s, leftIndx + 1, rightIndx - 1));
 }
 
 /**
