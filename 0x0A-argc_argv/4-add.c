@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 #include <ctype.h>
 #include <string.h>
 #include <stdlib.h>
@@ -15,16 +16,21 @@
 int main(int argc, char *argv[])
 {
 	int sum;
-	int counter;
+	int counteE;
+	int additions;
+	bool boolVar;
 
 	sum = 0;
-	counter = 1;
+	additions = 0;
 
-	while (counter <= argc)
+	for (counteE = 1; counteE < argc; counteE++)
 	{
-		if (isdigit(argv[counter]))
+		additions = atoi(argv[counteE]);
+		boolVar = isdigit(additions);
+
+		if (boolVar)
 		{
-			sum += atoi(argv[counter]);
+			sum += additions;
 		}
 		else
 		{
@@ -32,7 +38,6 @@ int main(int argc, char *argv[])
 			return (1);
 		}
 
-		counter++;
 	}
 
 	printf("%d\n", sum);
