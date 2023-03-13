@@ -11,23 +11,23 @@
  * else pointer to array on success
  */
 
-char *create_array(unsigned int size, char c)
+char *create_array(unsigned int siZe, char c)
 {
-	int g;
+	unsigned int g;
 	char *pArray;
 
-	pArray = malloc(size * 1);
+	g = siZe;
+	pArray = malloc(g * sizeof(char));
 
-	if (size == 0 || *pArray == '\0')
+	if (g == 0 || pArray == 0)
 	{
-		return ('\0');
+		return (NULL);
 	}
 
-	for (g = size; g >= 0; size--)
+	while (g--)
 	{
-		pArray[g] =  c;
+		pArray[g] = c;
 	}
 
 	return (pArray);
 }
-
