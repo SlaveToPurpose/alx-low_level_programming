@@ -4,7 +4,7 @@
 /**
  * create_array - create an array of chars and initialise with specific char
  *
- * @size: size of array
+ * @siZe: size of array
  * @c: thecharacter to initialise with
  *
  * Return: NULL if size is zero or functoin fails
