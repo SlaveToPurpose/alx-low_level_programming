@@ -27,23 +27,27 @@ char *str_concat(char *s1, char *s2)
 	{}
 	for (; lengthofStr2 != '\0'; lengthofStr2++)
 	{}
-
 	concattedStr = malloc((lengthofStr1 + 1 + lengthofStr2) * sizeof(char));
 
-	while (s1[i] != '\0')
+	if (s1)
 	{
-		concattedStr[i] = s1[i];
-		i++;
-	}
-	while (s2[j] != '\0')
-	{
-		concattedStr[i] = s2[j];
-		i++;
-		j++;
+		while (s1[i] != '\0')
+		{
+			concattedStr[i] = s1[i];
+			i++;
+		}
 	}
 
-	concattedStr[i+1] = '\0';
-
+	if (s2)
+	{
+		while (s2[j] != '\0')
+		{
+			concattedStr[i] = s2[j];
+			i++;
+			j++;
+		}
+	}
+	concattedStr[i] = '\0';
 	return (concattedStr);
 
 }
