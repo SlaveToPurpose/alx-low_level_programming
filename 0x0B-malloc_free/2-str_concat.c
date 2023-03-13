@@ -42,7 +42,7 @@ char *str_concat(char *s1, char *s2)
 		j++;
 	}
 
-	concattedStr[i] = '\0';
+	concattedStr[i+1] = '\0';
 
 	return (concattedStr);
 
