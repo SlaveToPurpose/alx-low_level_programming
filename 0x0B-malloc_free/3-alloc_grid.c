@@ -25,6 +25,8 @@ int **alloc_grid(int width, int height)
 	else
 	{
 		pParray = (int **) malloc(sizeof(int *) * height);
+		if (pParray == NULL)
+			return (NULL);
 		king = 0;
 
 		while (king < height)
@@ -47,9 +49,6 @@ int **alloc_grid(int width, int height)
 				pParray[glory][of] = 0;
 			}
 		}
-
-		if (pParray == NULL)
-			return (NULL);
 		return (pParray);
 	}
 }
