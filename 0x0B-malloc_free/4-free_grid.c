@@ -18,7 +18,7 @@ void free_grid(int **grid, int height)
 	}
 
 	kingOfGlory = 0;
-	
+
 	while (kingOfGlory < height)
 	{
 		free(grid[kingOfGlory]);
