@@ -23,6 +23,7 @@ char *argstostr(int ac, char **av)
 
 	jireh = 0;
 	elohim = 0;
+	spaceToFree = 0;
 
 	if (ac == 0 || av == NULL)
 	{
