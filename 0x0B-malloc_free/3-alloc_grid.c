@@ -49,5 +49,8 @@ int **alloc_grid(int width, int height)
 		}
 		return (pParray);
 	}
+
+	if(pParray == NULL)
+		return (NULL);
 }
 
