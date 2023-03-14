@@ -47,10 +47,10 @@ int **alloc_grid(int width, int height)
 				pParray[glory][of] = 0;
 			}
 		}
+
+		if (pParray == NULL)
+			return (NULL);
 		return (pParray);
 	}
-
-	if(pParray == NULL)
-		return (NULL);
 }
 
