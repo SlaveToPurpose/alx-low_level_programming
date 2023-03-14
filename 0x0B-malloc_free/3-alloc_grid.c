@@ -16,6 +16,7 @@ int **alloc_grid(int width, int height)
 	int king;
 	int of;
 	int glory;
+	int livingGod;
 
 	if (width == 0 || height == 0)
 	{
@@ -29,6 +30,13 @@ int **alloc_grid(int width, int height)
 		while (king < height)
 		{
 			pParray[king] = (int *) malloc(width * sizeof(int));
+			if (pParray[king] == NULL)
+			{
+				free(pParray);
+				for (livingGod = 0; livingGod <= king; livingGod++)
+					free(pParray[livingGod]);
+				return (NULL);
+			}
 			king++;
 		}
 
