@@ -1,14 +1,10 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include <ctype.h>
 #include <string.h>
 #include <stdlib.h>
 
 /**
  * main - program that adds positive numbers
- *
- * @argv: argument vector
- * @argc: argument count
  *
  * Return: 0 on success, 1 on error
  */
@@ -18,7 +14,6 @@ int main(int argc, char *argv[])
 	int sum;
 	int counteE;
 	int additions;
-	bool boolVar;
 
 	sum = 0;
 	additions = 0;
@@ -26,9 +21,8 @@ int main(int argc, char *argv[])
 	for (counteE = 1; counteE < argc; counteE++)
 	{
 		additions = atoi(argv[counteE]);
-		boolVar = isdigit(additions);
 
-		if (boolVar)
+		if (isdigit(argv[counteE]))
 		{
 			sum += additions;
 		}
