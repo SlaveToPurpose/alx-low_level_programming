@@ -11,44 +11,28 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int count1, count2;
 	char *newPointer;
-	unsigned int itter1, itter2, final;
+	unsigned int itter1, itter2;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-		count1 = 0;
-	}
-	else
-	{
-		for (count1 = 0; s1[count1] != '\0'; count1++)
-		{}
-	}
+	for (count1 = 0; s1[count1] != '\0'; count1++)
+	{}
+
 	if (s2 == NULL)
-	{
 		s2 = "";
-		count2 = 0;
-	}
-	else
-	{
-		for (count2 = 0; s2[count2] != '\0'; count2++)
-		{}
-	}
-	if (n >= count2)
-	{
-		final = count1 + count2 + 1;
-		newPointer = malloc(final);
-	}
-	else
-	{
-		final = count1 + n + 1;
-		newPointer = malloc(final);
-	}
+	for (count2 = 0; s2[count2] != '\0'; count2++)
+	{}
+
+	if (n > count2)
+		n = count2;
+
+	newPointer = malloc(count1 + n + 1);
 	if (newPointer == NULL)
 		return (NULL);
 
 	itter1 = 0;
 	itter2 = 0;
-	while (itter1 < final)
+	while (itter1 < (count1 + n + 1))
 	{
 		if (itter1 < count1)
 			newPointer[itter1] = s1[itter1];
