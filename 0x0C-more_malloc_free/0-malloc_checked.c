@@ -12,7 +12,7 @@
 
 void *malloc_checked(unsigned int b)
 {
-	int *pVar;
+	void *pVar;
 
 	pVar = malloc(b);
 
