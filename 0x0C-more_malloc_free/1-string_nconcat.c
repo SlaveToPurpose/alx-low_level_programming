@@ -31,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 
 	itter2 = 0;
-	for (itter1 = 0; itter1 < (count1 + n + 1); itter1++)
+	for (itter1 = 0; itter1 < (count1 + n); itter1++)
 	{
 		if (itter1 < count1)
 			newPointer[itter1] = s1[itter1];
