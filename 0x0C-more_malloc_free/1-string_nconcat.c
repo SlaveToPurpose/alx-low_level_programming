@@ -30,9 +30,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (newPointer == NULL)
 		return (NULL);
 
-	itter1 = 0;
 	itter2 = 0;
-	while (itter1 < (count1 + n + 1))
+	for (itter1 = 0; itter1 < (count1 + n + 1); itter1++)
 	{
 		if (itter1 < count1)
 			newPointer[itter1] = s1[itter1];
@@ -41,7 +40,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			newPointer[itter1] = s2[itter2];
 			itter2++;
 		}
-		itter1++;
 	}
 	newPointer[itter1] = '\0';
 	return (newPointer);
