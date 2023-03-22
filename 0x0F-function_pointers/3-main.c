@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	/*set and check operator*/
 	operation = argv[2];
 
-	if (get_op_func(operation) == NULL)
+	if (get_op_func(operation) == NULL || operation[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 	}
 
 	/*print result*/
-	potter = get_op_func(operation)(num1, num1);
+	potter = get_op_func(operation)(num1, num2);
 	printf("%d\n", potter);
 	return (0);
 }
