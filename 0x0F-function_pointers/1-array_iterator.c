@@ -11,7 +11,7 @@
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	long unsigned int glory;
+	unsigned long int glory;
 
 	/*check for NULLS*/
 	if (array == NULL || action == NULL || size == 0)
