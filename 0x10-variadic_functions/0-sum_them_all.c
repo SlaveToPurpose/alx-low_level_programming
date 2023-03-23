@@ -20,7 +20,7 @@ int sum_them_all(const unsigned int n, ...)
 		va_list arguments;
 		int summation;
 		unsigned int itterator;
-		int sumNum;
+		unsigned int sumNum;
 
 		va_start(arguments, n);
 		summation = 0;
