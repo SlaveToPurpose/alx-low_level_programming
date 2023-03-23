@@ -5,6 +5,7 @@
 /**
  * sum_them_all - sums all parameters
  * @n: number of digits to sum
+ * @...: variable number ofarguments
  * Return: 0 upon failure, sum of parameters on success
  */
 
