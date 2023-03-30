@@ -8,7 +8,7 @@
 
 size_t print_list(const list_t *h)
 {
-	unsigned int gloryCount;
+	size_t gloryCount;
 
 	gloryCount = 0;
 
