@@ -34,4 +34,7 @@ list_t *add_node_end(list_t **head, const char *str);
 /*function that frees a list*/
 void free_list(list_t *head);
 
+/*putchar prototypes*/
+int _putchar(char c);
+
 #endif /*LISTS_H*/
