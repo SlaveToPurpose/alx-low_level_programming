@@ -39,5 +39,5 @@ list_t *add_node_end(list_t **head, const char *str)
 		}
 		tempVar->next = new_node;
 	}
-	return (*tempVar);
+	return (tempVar);
 }
