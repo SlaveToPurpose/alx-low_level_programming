@@ -39,6 +39,6 @@ void free_list(list_t *head);
 int _putchar(char c);
 
 /*function to execute before main*/
-void before_main() __attribute__((constructor));
+void before_main(void) __attribute__((constructor));
 
 #endif /*LISTS_H*/
