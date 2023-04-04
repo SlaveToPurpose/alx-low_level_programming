@@ -21,9 +21,11 @@ int pop_listint(listint_t **head)
 
 	/*newHead = currentHead->next;*/
 	popData = currentHead->n;
+	*head = currentHead->next;
+
 	free(currentHead);
 
-	*head = NULL;
+	currentHead = *head;
 
 	return (popData);
 }
