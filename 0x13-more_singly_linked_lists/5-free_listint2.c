@@ -19,5 +19,5 @@ void free_listint2(listint_t **head)
 		current = tempNode;
 	}
 
-	currentNode = NULL;
+	current = NULL;
 }
