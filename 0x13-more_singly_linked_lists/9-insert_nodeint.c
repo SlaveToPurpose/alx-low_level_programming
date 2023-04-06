@@ -30,7 +30,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		if ((idx - 1) == itterator)
 		{
 			newNode->next = currNode->next;
-			currNode->next = currNode;
+			currNode->next = newNode;
 			return (newNode);
 		}
 		else
@@ -43,7 +43,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (idx == 0)
 	{
 		newNode->next = currNode;
-		*head = newNode;
+		currNode = newNode;
 		return (newNode);
 	}
 
