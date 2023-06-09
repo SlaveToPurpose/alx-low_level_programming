@@ -8,27 +8,25 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	int i;
 	hash_table_t *table;
 
 	if (size < 1)
 		return (NULL);
 
 	table = malloc(sizeof(hash_table_t));
-	if (table == NULL)
-		return (NULL);
-
-	table->size = size;
-	table->array = malloc(sizeof(hash_table_t));
-	if (table->array == NULL)
+	if (table)
 	{
-		free(table);
-		return (NULL);
-	}
+		table->size = size;
+		table->array = malloc(sizeof(hash_table_t));
+		if (table->array == NULL)
+		{
+			free(table->array);
+			free(table);
+			return (NULL);
+		}
 
-	memset(table->array, 0, sizeof(hash_table_t));
-	for (i = 0; i < table->size; i++)
-		table->items[i] = NULL;
+		memset(table->array, 0, sizeof(hash_table_t));
+	}
 
 	return (table);
 }
